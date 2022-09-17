@@ -1,0 +1,27 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation (
+            'org.junit.jupiter:junit-jupiter:5.8.1',
+            'com.codeborne:selenide:6.7.2',
+            'org.slf4j:slf4j-simple:2.0.0')
+}
+
+test {
+    useJUnitPlatform()
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
