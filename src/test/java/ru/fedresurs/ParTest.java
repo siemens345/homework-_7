@@ -33,7 +33,6 @@ public class ParTest {
         $(".btn").click();
         $(".search-result").shouldHave(text("УралЭм"));
     }
-
     @CsvSource(value = {"6661000096,  ОАО \"УРАЛЭМ\"", "1027739244741,  ООО \"ИНТЕРНЕТ РЕШЕНИЯ\"",})
     @ParameterizedTest(name = "Результаты поиска содержат текст \"{1}\" для запроса: \"{0}\"")
     void commonComplexSearchTest(String testData, String expectedResult) {
